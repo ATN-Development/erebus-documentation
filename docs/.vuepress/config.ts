@@ -15,5 +15,5 @@ export default defineUserConfig<DefaultThemeOptions>({
       lineNumbers: true,
     },
   },
-  theme: "@vuepress/default",
+  plugins: ["vuepress-plugin-smooth-scroll"],
 });
