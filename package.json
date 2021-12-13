@@ -1,0 +1,14 @@
+{
+  "name": "erebus-documentation",
+  "version": "0.0.1",
+  "description": "Erebus Discord API Wrapper official documentation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NotReallyEight",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.27"
+  }
+}
