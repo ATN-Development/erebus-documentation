@@ -1,4 +1,6 @@
-<html style="scroll-behavior:smooth;"></html>
+---
+lang: en-GB
+---
 
 # Erebus
 

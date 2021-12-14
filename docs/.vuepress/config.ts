@@ -11,7 +11,8 @@ export default defineUserConfig<DefaultThemeOptions>({
       "link",
       {
         rel: "stylesheet",
-        type: "text:css",
+        type: "text/css",
+        href: "docs/styles/style.css",
       },
     ],
   ],
@@ -32,7 +33,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             "/documentation/README.md",
             {
               text: "Client",
-              link: "/documentation/Client.md",
+              children: ["/documentation/Client.md"],
             },
           ],
         },

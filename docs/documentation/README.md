@@ -1,5 +1,3 @@
-<html style="scroll-behavior:smooth;"></html>
-
 # Erebus
 
 ## Introduction

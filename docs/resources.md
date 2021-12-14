@@ -1,4 +1,8 @@
-<html style="scroll-behavior:smooth;"></html>
+---
+lang: en-GB
+title: Erebus' resources
+description: Useful resources to get started with Erebus or contribute to it.
+---
 
 # Resources
 
