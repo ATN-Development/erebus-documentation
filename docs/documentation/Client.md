@@ -1,8 +1,10 @@
 ---
 lang: en-GB
-title: Erebus Client class
+title: Erebus Client Class
 description: Documentation for Erebus' Client class
 ---
+
+<html style="scroll-behavior: smooth;">
 
 # Client
 
@@ -150,3 +152,61 @@ Promise<void>
 ```typescript
 Promise<string>
 ```
+
+## Events
+
+### channelCreate
+
+> Fired when a guild channel is created
+
+| Parameter | Description                  | Type              |
+| --------- | ---------------------------- | ----------------- |
+| channel   | The channel that got created | `AnyGuildChannel` |
+
+### channelDelete
+
+> Fired when a guild channel is deleted
+
+| Parameter | Description                  | Type              |
+| --------- | ---------------------------- | ----------------- |
+| channel   | The channel that got deleted | `AnyGuildChannel` |
+
+### channelUpdate
+
+> Fired when a guild channel is updated
+
+| Parameter | Description                  | Type              |
+| --------- | ---------------------------- | ----------------- |
+| channel   | The channel that got updated | `AnyGuildChannel` |
+
+### error
+
+> Fired when a server-side error occurs
+
+| Parameter | Description           | Type                                                      |
+| --------- | --------------------- | --------------------------------------------------------- |
+| channel   | The error encountered | [`Error`](https://nodejs.org/api/errors.html#class-error) |
+
+### ready
+
+> Fired when the client is ready
+
+### resumed
+
+> Fired when a resume payload is sent
+
+### unknownPayload
+
+> Fired when an unknown payload has been received
+
+| Parameter | Description          | Type                   |
+| --------- | -------------------- | ---------------------- |
+| data      | The payload received | GatewayDispatchPayload |
+
+### warn
+
+> Fired when something wrong happens, but is not grave enough to kill the process
+
+| Parameter | Description      | Type   |
+| --------- | ---------------- | ------ |
+| message   | The warn message | string |

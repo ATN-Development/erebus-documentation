@@ -1,3 +1,9 @@
+---
+lang: en-GB
+---
+
+<html style="scroll-behavior: smooth;">
+
 # Erebus
 
 ## Introduction
