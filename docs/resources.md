@@ -1,3 +1,5 @@
+<html style="scroll-behavior:smooth;"></html>
+
 # Resources
 
 ## Join the community

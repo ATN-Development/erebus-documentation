@@ -1,3 +1,5 @@
+<html style="scroll-behavior:smooth;"></html>
+
 # Client extends EventEmitter
 
 A Discord client

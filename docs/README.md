@@ -1,3 +1,5 @@
+<html style="scroll-behavior:smooth;"></html>
+
 # Erebus
 
 ## Why Erebus?
