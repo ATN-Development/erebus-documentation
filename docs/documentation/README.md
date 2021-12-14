@@ -2,7 +2,7 @@
 lang: en-GB
 ---
 
-<html style="scroll-behavior: smooth;">
+<html style="scroll-behavior: smooth;"></html>
 
 # Erebus
 

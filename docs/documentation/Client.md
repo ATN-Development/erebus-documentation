@@ -4,7 +4,7 @@ title: Erebus Client Class
 description: Documentation for Erebus' Client class
 ---
 
-<html style="scroll-behavior: smooth;">
+<html style="scroll-behavior: smooth;"></html>
 
 # Client
 

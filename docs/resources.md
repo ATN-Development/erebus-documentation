@@ -4,7 +4,7 @@ title: Erebus' resources
 description: Useful resources to get started with Erebus or contribute to it.
 ---
 
-<html style="scroll-behavior: smooth;">
+<html style="scroll-behavior: smooth;"></html>
 
 # Resources
 
