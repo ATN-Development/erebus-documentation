@@ -19,7 +19,7 @@ type = Application | undefined;
 > The guilds the client is in
 
 ```typescript
-type= Map\<Snowflake, UnavailableGuild\>()
+type = Map<Snowflake, UnavailableGuild>();
 ```
 
 `.heartbeatInfo`
@@ -109,3 +109,16 @@ type = string | undefined;
 ```typescript
 type = WebSocket | undefined;
 ```
+
+## Constructor
+
+```typescript
+new Client(options);
+```
+
+| Parameter      | Default                     | Description                                                                                                                                   | Type                  |
+| -------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| token          | `process.env.DISCORD_TOKEN` | The token of this client. This defaults to `process.env.DISCORD_TOKEN` if none is provided                                                    | `Token \| undefined`  |
+| largeThreshold | `50`                        | Total number of members where the gateway will stop sending offline members in the guild member list                                          | `number \| undefined` |
+| intents        | -                           | Intents to use for this client                                                                                                                | `Intents`             |
+| userAgent      | -                           | An optional user agent to add in the requests to the API. See [Discord's reference](https://discord.com/developers/docs/reference#user-agent) | `string \| undefined` |

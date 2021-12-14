@@ -28,7 +28,13 @@ export default defineUserConfig<DefaultThemeOptions>({
       "/documentation": [
         {
           text: "Documentation",
-          children: ["/documentation/README.md", "/documentation/Client.md"],
+          children: [
+            "/documentation/README.md",
+            {
+              text: "Client",
+              link: "/documentation/Client.md",
+            },
+          ],
         },
       ],
     },
@@ -36,6 +42,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   markdown: {
     code: {
       highlightLines: true,
+      lineNumbers: false,
     },
   },
 });
