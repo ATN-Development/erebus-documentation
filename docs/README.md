@@ -1,33 +1,9 @@
-<html style="scroll-behavior: smooth;"></html>
-
 # Erebus
 
-## Introduction
+## Why Erebus?
 
-Hello, and welcome to the official documentation website for Erebus!
+Erebus is a fast and lightweight Discord API wrapper maintained by [ATN Development](https://github.com/ATN-Development), providing a great developing experience without profit from the company providing the service!
 
-To get started with the library, you may want to use the following way:
+## More information
 
-## Get Started
-
-```javascript
-const erebus = require("erebus");
-const client = new erebus.client({
-  intents: 0,
-  token: "YourTokenHere",
-});
-
-client.on("ready", () => {
-  console.log("Ready!");
-});
-
-client.connect().catch(console.error);
-```
-
-## Lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-## Another lorem ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+You can check out the [resources](resources.md) page for more resources, and also the [documentation](documentation/README.md) to get more information about how to use the library. You can also check out our [GitHub repository](https://github.com/ATN-Development/erebus). If you want to make this documentation website better, feel free to make a [Pull Request](https://github.com/ATN-Development/erebus-documentation).
