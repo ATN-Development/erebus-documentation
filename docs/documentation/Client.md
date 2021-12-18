@@ -1,6 +1,6 @@
 ---
 lang: en-GB
-title: Erebus Client Class
+title: Client
 description: Documentation for Erebus' Client class
 ---
 
@@ -8,7 +8,7 @@ description: Documentation for Erebus' Client class
 
 # Client
 
-# Client extends EventEmitter
+# Client extends [EventEmitter](https://nodejs.org/api/events.html#class-eventemitter)
 
 A Discord client
 
@@ -19,47 +19,58 @@ A Discord client
 > The client's application
 
 ```typescript
-type = Application | undefined;
+type application = Application | undefined;
 ```
+
+- See [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
 `.guilds`
 
 > The guilds the client is in
 
 ```typescript
-type = Map<Snowflake, UnavailableGuild>();
+type guilds = Map<Snowflake, UnavailableGuild>;
 ```
+
+- See [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+- See [Snowflake](../reference.md#Snowflake)
 
 `.heartbeatInfo`
 
 > Data about an heartbeat
 
 ```typescript
-type = AdvancedHeartbeatInfo;
+type heartbeatInfo = AdvancedHeartbeatInfo;
 ```
+
+- See [AdvancedHeartbeatInfo](../reference.md#AdvancedHeartbeatInfo-extends-HeartbeatInfo)
 
 `.intents`
 
 > Intents used by this client
 
 ```typescript
-type = Intents;
+type intents = Intents;
 ```
+
+- See [Intents](../reference.md#Intents)
 
 `.largeThreshold`
 
 > Total number of members where the gateway will stop sending offline members in the guild member list
 
 ```typescript
-type = number;
+type largeThreshold = number;
 ```
+
+- See [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 
 `.rest`
 
 > The rest manager of this client
 
 ```typescript
-type = Rest;
+type rest = Rest;
 ```
 
 `.seq`
@@ -67,40 +78,52 @@ type = Rest;
 > The last sequence number received from the WebSocket server
 
 ```typescript
-type = number | null;
+type seq = number | null;
 ```
+
+- See [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+- See [null](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
 
 `.sessionId`
 
 > The session ID of this client
 
 ```typescript
-type = string | undefined;
+type sessionId = string | undefined;
 ```
+
+- See [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+- See [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
 `.status`
 
 > The status of the connection of this client
 
 ```typescript
-type = ClientStatus;
+type status = ClientStatus;
 ```
+
+- See [ClientStatus](../reference.md#ClientStatus)
 
 `.token`
 
 > The token used by this client
 
 ```typescript
-type = string;
+type = Token;
 ```
+
+- See [Token](../reference.md#Token)
 
 `.user`
 
 > The client user
 
 ```typescript
-type = APIUser | undefined;
+type = User | undefined;
 ```
+
+- See [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
 `.userAgent`
 
@@ -110,6 +133,9 @@ type = APIUser | undefined;
 type = string | undefined;
 ```
 
+- See [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+- See [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
+
 `.ws`
 
 > The WebSocket of this client
@@ -117,6 +143,9 @@ type = string | undefined;
 ```typescript
 type = WebSocket | undefined;
 ```
+
+- See [WebSocket](https://github.com/websockets/ws/blob/HEAD/doc/ws.md#class-websocket)
+- See [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
 ## Constructor
 
@@ -131,6 +160,12 @@ new Client(options);
 | options.intents        | -                           | Intents to use for this client                                                                                                                | `Intents`             |
 | options.userAgent      | -                           | An optional user agent to add in the requests to the API. See [Discord's reference](https://discord.com/developers/docs/reference#user-agent) | `string \| undefined` |
 
+- See [Intents](../reference.md#Intents)
+- See [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+- See [process.env.DISCORD_TOKEN](../reference.md#Token)
+- See [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+- See [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
+
 ## Functions
 
 ### connect()
@@ -143,6 +178,9 @@ new Client(options);
 Promise<void>
 ```
 
+- See [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- See [void](https://www.typescriptlang.org/docs/handbook/2/functions.html#void)
+
 ### getGatewayUrl()
 
 > Get the gateway url.
@@ -153,31 +191,36 @@ Promise<void>
 Promise<string>
 ```
 
+- See [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- See [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+
 ## Events
 
 ### channelCreate
 
 > Fired when a guild channel is created
 
-| Parameter | Description                  | Type              |
-| --------- | ---------------------------- | ----------------- |
-| channel   | The channel that got created | `AnyGuildChannel` |
+| Parameter | Description                  | Type                                                 |
+| --------- | ---------------------------- | ---------------------------------------------------- |
+| channel   | The channel that got created | [`AnyGuildChannel`](../reference.md#AnyGuildChannel) |
+
+- See [AnyGuildChannel](../reference.md#AnyGuildChannel)
 
 ### channelDelete
 
 > Fired when a guild channel is deleted
 
-| Parameter | Description                  | Type              |
-| --------- | ---------------------------- | ----------------- |
-| channel   | The channel that got deleted | `AnyGuildChannel` |
+| Parameter | Description                  | Type                                                 |
+| --------- | ---------------------------- | ---------------------------------------------------- |
+| channel   | The channel that got deleted | [`AnyGuildChannel`](../reference.md#AnyGuildChannel) |
 
 ### channelUpdate
 
 > Fired when a guild channel is updated
 
-| Parameter | Description                  | Type              |
-| --------- | ---------------------------- | ----------------- |
-| channel   | The channel that got updated | `AnyGuildChannel` |
+| Parameter | Description                  | Type                                                 |
+| --------- | ---------------------------- | ---------------------------------------------------- |
+| channel   | The channel that got updated | [`AnyGuildChannel`](../reference.md#AnyGuildChannel) |
 
 ### error
 
@@ -199,14 +242,14 @@ Promise<string>
 
 > Fired when an unknown payload has been received
 
-| Parameter | Description          | Type                   |
-| --------- | -------------------- | ---------------------- |
-| data      | The payload received | GatewayDispatchPayload |
+| Parameter | Description          | Type                                                                                                    |
+| --------- | -------------------- | ------------------------------------------------------------------------------------------------------- |
+| data      | The payload received | [`GatewayDispatchPayload`](https://github.com/discordjs/discord-api-types/blob/main/gateway/v9.ts#L270) |
 
 ### warn
 
 > Fired when something wrong happens, but is not grave enough to kill the process
 
-| Parameter | Description      | Type   |
-| --------- | ---------------- | ------ |
-| message   | The warn message | string |
+| Parameter | Description      | Type                                                                                                |
+| --------- | ---------------- | --------------------------------------------------------------------------------------------------- |
+| message   | The warn message | [`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) |

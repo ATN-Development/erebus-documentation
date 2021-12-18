@@ -23,7 +23,11 @@ export default defineUserConfig<DefaultThemeOptions>({
       "/": [
         {
           text: "Erebus",
-          children: ["/README.md", "resources.md"],
+          children: ["/README.md", "/reference.md", "resources.md"],
+        },
+        {
+          text: "Documentation",
+          children: ["/documentation/README.md"],
         },
       ],
       "/documentation": [
@@ -32,10 +36,14 @@ export default defineUserConfig<DefaultThemeOptions>({
           children: [
             "/documentation/README.md",
             {
-              text: "Client",
+              text: "Classes",
               children: ["/documentation/Client.md"],
             },
           ],
+        },
+        {
+          text: "Erebus",
+          children: ["/README.md", "/reference.md", "resources.md"],
         },
       ],
     },
