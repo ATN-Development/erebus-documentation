@@ -10,11 +10,11 @@ description: Documentation for Erebus' Client class
 
 # Client extends [EventEmitter](https://nodejs.org/api/events.html#class-eventemitter)
 
-A Discord client
+> A Discord client
 
 ## Properties
 
-`.application`
+`.application?`
 
 > The client's application
 
@@ -33,7 +33,7 @@ type guilds = Map<Snowflake, UnavailableGuild>;
 ```
 
 - See [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
-- See [Snowflake](../reference.md#Snowflake)
+- See [Snowflake](Types.md#snowflake)
 
 `.heartbeatInfo`
 
@@ -43,7 +43,7 @@ type guilds = Map<Snowflake, UnavailableGuild>;
 type heartbeatInfo = AdvancedHeartbeatInfo;
 ```
 
-- See [AdvancedHeartbeatInfo](../reference.md#AdvancedHeartbeatInfo-extends-HeartbeatInfo)
+- See [AdvancedHeartbeatInfo](Types.md#advancedheartbeatinfo-extends-heartbeatinfo)
 
 `.intents`
 
@@ -53,7 +53,7 @@ type heartbeatInfo = AdvancedHeartbeatInfo;
 type intents = Intents;
 ```
 
-- See [Intents](../reference.md#Intents)
+- See [Intents](Types.md#intents)
 
 `.largeThreshold`
 
@@ -103,7 +103,7 @@ type sessionId = string | undefined;
 type status = ClientStatus;
 ```
 
-- See [ClientStatus](../reference.md#ClientStatus)
+- See [ClientStatus](Types.md#clientstatus)
 
 `.token`
 
@@ -113,7 +113,7 @@ type status = ClientStatus;
 type = Token;
 ```
 
-- See [Token](../reference.md#Token)
+- See [Token](Types.md#token)
 
 `.user`
 
@@ -153,16 +153,16 @@ type = WebSocket | undefined;
 new Client(options);
 ```
 
-| Parameter              | Default                     | Description                                                                                                                                   | Type                  |
-| ---------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| options.token          | `process.env.DISCORD_TOKEN` | The token of this client. This defaults to `process.env.DISCORD_TOKEN` if none is provided                                                    | `Token \| undefined`  |
-| options.largeThreshold | `50`                        | Total number of members where the gateway will stop sending offline members in the guild member list                                          | `number \| undefined` |
-| options.intents        | -                           | Intents to use for this client                                                                                                                | `Intents`             |
-| options.userAgent      | -                           | An optional user agent to add in the requests to the API. See [Discord's reference](https://discord.com/developers/docs/reference#user-agent) | `string \| undefined` |
+| Parameter              | Default                     | Description                                                                                                                                   | Type                  | Required |
+| ---------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | -------- |
+| options.token          | `process.env.DISCORD_TOKEN` | The token of this client. This defaults to `process.env.DISCORD_TOKEN` if none is provided                                                    | `Token \| undefined`  | `false`  |
+| options.largeThreshold | `50`                        | Total number of members where the gateway will stop sending offline members in the guild member list                                          | `number \| undefined` | `false`  |
+| options.intents        | -                           | Intents to use for this client                                                                                                                | `Intents`             | `true`   |
+| options.userAgent      | -                           | An optional user agent to add in the requests to the API. See [Discord's reference](https://discord.com/developers/docs/reference#user-agent) | `string \| undefined` | `true`   |
 
-- See [Intents](../reference.md#Intents)
+- See [Intents](Types.md#intents)
 - See [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
-- See [process.env.DISCORD_TOKEN](../reference.md#Token)
+- See [process.env.DISCORD_TOKEN](Types.md#token)
 - See [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 - See [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
@@ -200,27 +200,27 @@ Promise<string>
 
 > Fired when a guild channel is created
 
-| Parameter | Description                  | Type                                                 |
-| --------- | ---------------------------- | ---------------------------------------------------- |
-| channel   | The channel that got created | [`AnyGuildChannel`](../reference.md#AnyGuildChannel) |
+| Parameter | Description                  | Type                                          |
+| --------- | ---------------------------- | --------------------------------------------- |
+| channel   | The channel that got created | [`AnyGuildChannel`](Types.md#AnyGuildChannel) |
 
-- See [AnyGuildChannel](../reference.md#AnyGuildChannel)
+- See [AnyGuildChannel](Types.md#anyguildchannel)
 
 ### channelDelete
 
 > Fired when a guild channel is deleted
 
-| Parameter | Description                  | Type                                                 |
-| --------- | ---------------------------- | ---------------------------------------------------- |
-| channel   | The channel that got deleted | [`AnyGuildChannel`](../reference.md#AnyGuildChannel) |
+| Parameter | Description                  | Type                                          |
+| --------- | ---------------------------- | --------------------------------------------- |
+| channel   | The channel that got deleted | [`AnyGuildChannel`](Types.md#anyguildchannel) |
 
 ### channelUpdate
 
 > Fired when a guild channel is updated
 
-| Parameter | Description                  | Type                                                 |
-| --------- | ---------------------------- | ---------------------------------------------------- |
-| channel   | The channel that got updated | [`AnyGuildChannel`](../reference.md#AnyGuildChannel) |
+| Parameter | Description                  | Type                                          |
+| --------- | ---------------------------- | --------------------------------------------- |
+| channel   | The channel that got updated | [`AnyGuildChannel`](Types.md#anyguildchannel) |
 
 ### error
 
