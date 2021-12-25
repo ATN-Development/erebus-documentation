@@ -39,6 +39,7 @@ export default defineUserConfig<DefaultThemeOptions>({
               text: "Classes",
               children: [
                 "/documentation/APIRequest.md",
+                "/documentation/DiscordError.md",
                 "/documentation/Client.md",
               ],
             },
