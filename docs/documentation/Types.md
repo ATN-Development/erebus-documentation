@@ -59,6 +59,42 @@ interface Attachment {
 - See [Buffer](https://nodejs.org/api/buffer.html#buffer)
 - See [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
+### ClientOptions
+
+> Options to instantiate a client
+
+```typescript
+interface ClientOptions {
+  /**
+   * The token of this client
+   * This defaults to `process.env.DISCORD_TOKEN` if none is provided
+   */
+  token?: Token;
+
+  /**
+   * Total number of members where the gateway will stop sending offline members in the guild member list
+   */
+  largeThreshold?: number;
+
+  /**
+   * Intents to use for this client
+   */
+  intents: Intents;
+
+  /**
+   * An optional user agent to add in the requests to the API
+   * @see https://discord.com/developers/docs/reference#user-agent
+   */
+  userAgent?: string;
+}
+```
+
+- See [Discord's API User Agent documentation](https://discord.com/developers/docs/reference#user-agent)
+- See [Intents](#intents)
+- See [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+- See [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+- See [Token](#token)
+
 ### ClientStatus
 
 > The state of the client connection

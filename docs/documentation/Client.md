@@ -153,16 +153,16 @@ type = WebSocket | undefined;
 new Client(options);
 ```
 
-| Parameter              | Default                     | Description                                                                                                                                   | Type                  | Required |
-| ---------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | -------- |
-| options.token          | `process.env.DISCORD_TOKEN` | The token of this client. This defaults to `process.env.DISCORD_TOKEN` if none is provided                                                    | `Token \| undefined`  | `false`  |
-| options.largeThreshold | `50`                        | Total number of members where the gateway will stop sending offline members in the guild member list                                          | `number \| undefined` | `false`  |
-| options.intents        | -                           | Intents to use for this client                                                                                                                | `Intents`             | `true`   |
-| options.userAgent      | -                           | An optional user agent to add in the requests to the API. See [Discord's reference](https://discord.com/developers/docs/reference#user-agent) | `string \| undefined` | `true`   |
+| Parameter              | Default                     | Description                                                                                                                                   | Type                                      | Required |
+| ---------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | -------- |
+| options                | -                           | Options for the client                                                                                                                        | [`ClientOptions`](Types.md#clientoptions) | `true`   |
+| options.token          | `process.env.DISCORD_TOKEN` | The token of this client. This defaults to `process.env.DISCORD_TOKEN` if none is provided                                                    | `Token \| undefined`                      | `false`  |
+| options.largeThreshold | `50`                        | Total number of members where the gateway will stop sending offline members in the guild member list                                          | `number \| undefined`                     | `false`  |
+| options.intents        | -                           | Intents to use for this client                                                                                                                | [`Intents`](Types.md#intents)             | `true`   |
+| options.userAgent      | -                           | An optional user agent to add in the requests to the API. See [Discord's reference](https://discord.com/developers/docs/reference#user-agent) | `string \| undefined`                     | `true`   |
 
-- See [Intents](Types.md#intents)
 - See [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
-- See [process.env.DISCORD_TOKEN](Types.md#token)
+- See [Token](Types.md#token)
 - See [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 - See [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
