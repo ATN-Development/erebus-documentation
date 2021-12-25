@@ -26,6 +26,10 @@ type attachments = Attachment[];
 
 > The base url of this request
 
+```typescript
+type baseUrl = string;
+```
+
 - See [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
 `.body`
@@ -137,11 +141,9 @@ new APIRequest(rest, path, method, options);
 
 > Add some attachments to this request
 
-| Parameter   | Description        | Type           | Optional |
-| ----------- | ------------------ | -------------- | -------- |
-| attachments | Attachments to add | `Attachment[]` | `false`  |
-
-- See [Attachment](Types.md#attachment)
+| Parameter   | Description        | Type                                  | Optional |
+| ----------- | ------------------ | ------------------------------------- | -------- |
+| attachments | Attachments to add | [`Attachment[]`](Types.md#attachment) | `false`  |
 
 **Returns** the new request
 
@@ -155,11 +157,9 @@ APIRequest;
 
 > Edit headers for this request
 
-| Parameter | Description           | Type                  | Optional |
-| --------- | --------------------- | --------------------- | -------- |
-| headers   | Headers to add/remove | `OutgoingHttpHeaders` | `false`  |
-
-- See [OutgoingHttpHeaders](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/node/v14/http.d.ts#L76)
+| Parameter | Description           | Type                                                                                                                 | Optional |
+| --------- | --------------------- | -------------------------------------------------------------------------------------------------------------------- | -------- |
+| headers   | Headers to add/remove | [`OutgoingHttpHeaders`](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/node/v14/http.d.ts#L76) | `false`  |
 
 **Returns** the new request
 
@@ -173,11 +173,9 @@ APIRequest;
 
 > Remove some attachments from this request
 
-| Parameter   | Description           | Type       | Optional |
-| ----------- | --------------------- | ---------- | -------- |
-| attachments | Attachments to remove | `string[]` | `false`  |
-
-- See [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+| Parameter   | Description           | Type                                                                                                  | Optional |
+| ----------- | --------------------- | ----------------------------------------------------------------------------------------------------- | -------- |
+| attachments | Attachments to remove | [`string[]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | `false`  |
 
 **Returns** the new request
 
