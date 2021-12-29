@@ -162,6 +162,44 @@ type Json = Json[] | boolean | number | string | { [property: string]: Json };
 type Path = `/${string}`;
 ```
 
+### RateLimitHandler
+
+> Data about ratelimits related to a bucket
+
+```typescript
+interface RateLimitHandler {
+  /**
+   * A unique string denoting the rate limit being encountered
+   */
+  bucket: string;
+
+  /**
+   * The number of requests that can be made
+   */
+  limit: number;
+
+  /**
+   * The number of remaining requests that can be made
+   */
+  remaining: number;
+
+  /**
+   * Epoch time (seconds) at which the rate limit resets
+   */
+  reset?: number;
+
+  /**
+   * Routes that share the same bucket
+   */
+  routes: `${RequestMethod} ${Path}`[];
+}
+```
+
+- See [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+- See [Path](#path)
+- See [RequestMethod](#requestmethod)
+- See [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+
 ### RequestMethod
 
 > The method of a request to the API

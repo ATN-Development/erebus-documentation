@@ -2,7 +2,7 @@ import { defineUserConfig } from "vuepress";
 import type { DefaultThemeOptions } from "vuepress";
 
 export default defineUserConfig<DefaultThemeOptions>({
-  base: "/",
+  base: "/erebus-documentation/",
   lang: "en-GB",
   title: "Erebus",
   description: "Erebus official documentation.",
@@ -41,6 +41,7 @@ export default defineUserConfig<DefaultThemeOptions>({
                 "/documentation/APIRequest.md",
                 "/documentation/DiscordError.md",
                 "/documentation/Client.md",
+                "/documentation/Rest.md",
               ],
             },
             {
