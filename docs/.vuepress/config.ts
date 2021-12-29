@@ -2,7 +2,7 @@ import { defineUserConfig } from "vuepress";
 import type { DefaultThemeOptions } from "vuepress";
 
 export default defineUserConfig<DefaultThemeOptions>({
-  base: "/erebus-documentation/",
+  base: "/",
   lang: "en-GB",
   title: "Erebus",
   description: "Erebus official documentation.",
