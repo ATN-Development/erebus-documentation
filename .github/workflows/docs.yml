@@ -43,6 +43,10 @@ jobs:
       - name: Build VuePress site
         run: yarn docs:build
 
+      # Run info command
+      - name: Get VuePress info
+        run: npx vuepress info
+
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
