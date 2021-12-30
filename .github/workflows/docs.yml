@@ -45,7 +45,7 @@ jobs:
 
       # Run build script
       - name: Build VuePress site
-        run: yarn docs:build
+        run: npm run docs:build
 
       # Run info command
       - name: Get VuePress info
