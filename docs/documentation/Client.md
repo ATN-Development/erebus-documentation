@@ -4,8 +4,6 @@ title: Client
 description: Documentation for Erebus' Client class
 ---
 
-<html style="scroll-behavior: smooth;"></html>
-
 # Client
 
 # Client extends [EventEmitter](https://nodejs.org/api/events.html#class-eventemitter)

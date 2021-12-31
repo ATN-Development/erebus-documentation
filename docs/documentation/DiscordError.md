@@ -4,8 +4,6 @@ title: DiscordError
 description: Documentation for Erebus' DiscordError class
 ---
 
-<html style="scroll-behavior: smooth;"></html>
-
 # DiscordError
 
 # DiscordError extends [Error](https://nodejs.org/api/errors.html#class-error)

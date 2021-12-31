@@ -4,8 +4,6 @@ title: Typings
 description: Documentation for Erebus' type definitions
 ---
 
-<html style="scroll-behavior: smooth;"></html>
-
 # Reference
 
 ## Typings

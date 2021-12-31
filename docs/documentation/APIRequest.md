@@ -4,8 +4,6 @@ title: APIRequest
 description: Documentation for Erebus' APIRequest class
 ---
 
-<html style="scroll-behavior: smooth;"></html>
-
 # APIRequest
 
 > A class representing a request to the API

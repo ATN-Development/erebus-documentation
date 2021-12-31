@@ -4,8 +4,6 @@ title: Rest
 description: Documentation for Erebus' Rest class
 ---
 
-<html style="scroll-behavior: smooth;"></html>
-
 # Rest
 
 > A rest manager for the client
